@@ -1,6 +1,5 @@
 
-
-SISTEMA DE CONTROL DE VERSIONES
+SISTEMA DE CONTROL DE VERSIONES version 2
 
 FTP no es un sistema de control de versiones
 Archivos
