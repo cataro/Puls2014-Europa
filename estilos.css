@@ -36,17 +36,23 @@
 
 .icon-f-abajo:before {
 	content: "\e603";
+	color: #DD4F24;
 }
 .icon-f-arriba:before {
 	content: "\e604";
 }
 .icon-lapiz:before {
 	content: "\e602";
+	margin-right: 0.8em;
 }
 .icon-estrella:before {
 	content: "\e601";
-}
+	color:#FFBE2C;
+	margin-right: 0.8em;
+	position: relative;
+	top: 0.1em;
 
+}
 
 a
 {
@@ -86,7 +92,7 @@ header
 {
 	background: #343B54;
 	color: white;
-	padding: 0.5em;
+	padding: 0.7em 0.7em 0 0;
 	overflow: hidden;
 	position: relative;
 }
@@ -98,11 +104,11 @@ header h1
 {
 	font-size: 1.2em; /* 1.2 en base a la fuente del body*/
 	font-weight: normal;
-	margin:0.2em 70px 0 0;
+	margin:0.7em 0.7em 0 0;
 }
 header #avatar
 {
-	margin: 0.5em 0.5em 0 0;
+	margin: 1.5em 0.5em 0 0;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -122,8 +128,9 @@ header #avatar img
 }
 nav 
 {
-	background: #80BCA3;
-	padding: 0 0.5em 0 0.5em;
+	background: #4488CD;
+	box-shadow: rgba(0,0,0,0.5) 0px 0px 10px;
+	padding: 0 6em 0 0;
 	position: relative;
 }
 nav ul
@@ -176,7 +183,6 @@ nav ul li a{
 }
 #contenido .item .datos_item
 {
-	margin: 0.5em 1em 0 0 ;
 	text-align: right;
 }
 #contenido .item .datos_item .fecha_item
@@ -224,6 +230,11 @@ nav ul li a{
 	top: 100%;
 	width: 90%;
 }
+#contenido .item .votacion a
+{
+	text-decoration: none;	
+}
+
 #contenido .item .votacion .comentarios_item, 
 #contenido .item .votacion .guardar_item
 {
