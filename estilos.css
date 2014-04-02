@@ -9,6 +9,7 @@
     font-style: normal;
 
 }*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 @font-face {
 	font-family: 'puls4';
 	src:url('fuentes/puls4.eot?93002l');
@@ -51,17 +52,20 @@
 	margin-right: 0.8em;
 	position: relative;
 	top: 0.1em;
-
 }
 
 a
 {
 	color: #22BCE0;
 }
+aside
+{
+	display: none;
+}
 body
 {
 	background: #EEEEEE;
-	font-family: "open sans";
+	font-family: "Open Sans";
 	font-size: 16px;
 }
 footer
@@ -92,7 +96,7 @@ header
 {
 	background: #343B54;
 	color: white;
-	padding: 0.7em 0.7em 0 0;
+	padding: 0.5em;
 	overflow: hidden;
 	position: relative;
 }
@@ -104,23 +108,31 @@ header h1
 {
 	font-size: 1.2em; /* 1.2 en base a la fuente del body*/
 	font-weight: normal;
-	margin:0.7em 0.7em 0 0;
+	margin: 0.8em 0 0 80px;
 }
 header #avatar
 {
-	margin: 1.5em 0.5em 0 0;
+	margin: 0.5em 0.5em 0 0;
 	position: absolute;
-	top: 0;
 	right: 0;
+	top: 0;
+}
+header #logo
+{
+	border-right: 1px solid white;
+	margin: 0 0 0.5em 0;
 }
 header #logo img 
 {
-	border-right: 1px solid white;
 	margin-right: 0.5em;
 	padding-right: 0.5em;
 	width: 52px;
+	-webkit-transition: .5s;
 }
-
+header #logo img:hover
+{
+	-webkit-transform: rotate(360deg);
+}
 header #avatar img 
 {
 	border-radius: 50%;
@@ -151,20 +163,36 @@ nav ul #publicar_nav a
 	border-radius: 5px;
 	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
 	font-style: italic;
-	padding: 0.8em 0.5em; 
+	padding: 0.8em 0.5em 0.8em 2.5em;  
 	text-decoration: none;
 	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
 }
-nav ul li {
+nav ul #publicar_nav a:before{
+	position: absolute;
+	left:.5em;
+	top:.7em;
+}
+nav ul #publicar_nav a:hover:before{
+	font-size: 20px;
+	
+}
+nav ul a:hover{
+	background: #343B54;
+}
+nav ul li 
+{
 	display: inline-block;
 	margin: 0 1em 0 0;
 }
-nav ul li a{
+nav ul li a
+{
 	color: white;
 	display: block;
-	padding: 0.5em 0 0.5em 0;
+	padding: 0.5em;
 	text-decoration: none;
+	-webkit-transition:.3s;
 }
+
 #contenido
 {
 	margin: 1em;
@@ -180,6 +208,7 @@ nav ul li a{
 #contenido .item .autor_item
 {
 	color: #AAA;
+	padding-bottom: 0.5em;
 }
 #contenido .item .datos_item
 {
@@ -234,9 +263,47 @@ nav ul li a{
 {
 	text-decoration: none;	
 }
-
 #contenido .item .votacion .comentarios_item, 
 #contenido .item .votacion .guardar_item
 {
 	float: right;
+}
+
+/*@media print
+{
+	body
+	{
+		font-size: 50px;
+	}
+}*/
+
+@media screen and (min-width: 800px){
+	#contenido
+	{
+		overflow: hidden;
+	}
+	#contenido .item
+	{
+		width: 49%;
+		float: left;
+	
+	}
+		#contenido .item:nth-child(odd)
+	{
+		margin-right: 2%;
+	
+	}
+}
+@media screen and (min-width: 1000px){
+	aside
+	{
+		display: block;
+		float:right;
+		margin: 1em;
+		width:  20%;
+	}
+	aside video
+	{
+		width: 100%;
+	}
 }
