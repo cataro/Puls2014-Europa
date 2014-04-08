@@ -5,10 +5,13 @@ var $form = $('#formulario'),
 	$lista = $('#contenido');
 
 function mostrarOcultarFormulario(){
+
 	$form.slideToggle();
-	return false;
+	$lista.slideToggle();
 }
-function agregarPost(){
+function agregarPost(e){
+	e.preventDefault();
+
 	var titulo = $titulo.val(),
 		url = $url.val(),
 		clone = $primerPost.clone();
@@ -19,9 +22,11 @@ function agregarPost(){
 
 	clone.hide()
 
-	$lista.prepend(clone)
-
-	clone.slideDown()
+	$lista.prepend(clone);
+	mostrarOcultarFormulario();
+	$titulo.val("");
+	$url.val("");
+	clone.fadein();
 }
-$('#publicar_nav a').click( mostrarOcultarFormulario)
-$('#formulario').on('submit', agregarPost)
+$('#publicar_nav a').click(mostrarOcultarFormulario);
+$('#formulario').on('submit', agregarPost);
