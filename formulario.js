@@ -28,5 +28,23 @@ function agregarPost(e){
 	$url.val("");
 	clone.fadein();
 }
+function grabarInformacion(e){
+	e.preventDefault();
+
+	var titulo 	= $titulo.val(),
+		url 	= $url.val(),
+		ls 		= localStorage,
+		ss		= sessionStorage;
+
+	ls.setItem('titulo', titulo);
+	ls.setItem('url', url);
+
+	ss.setItem('titulo', titulo);
+	ss.setItem('url', url);
+
+	mostrarOcultarFormulario();
+	$titulo.val("");
+	$url.val("");
+}
 $('#publicar_nav a').click(mostrarOcultarFormulario);
 $('#formulario').on('submit', agregarPost);
